@@ -1,8 +1,8 @@
 import Status from "../../../common/status"
-import ACTION from "./actions"
+import TYPE_ACTION from "./actions.type"
 
 interface TODO_ACTION {
-  type: ACTION,
+  type: TYPE_ACTION,
   payload: any
 }
 
@@ -13,13 +13,13 @@ const initialState = {
 
 const todoReducer = (state = initialState, action: TODO_ACTION) => {
   switch(action.type) {
-    case ACTION.ADD_TODO: 
+    case TYPE_ACTION.ADD_TODO: 
       console.log('action add todo')
       return {
         ...state,
         status: Status.SUCCEEDED
       }
-    case ACTION.GET_LIST:
+    case TYPE_ACTION.GET_LIST_TODOS:
       console.log('action get list')
       return {
         ...state,

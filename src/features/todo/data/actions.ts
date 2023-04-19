@@ -1,7 +1,15 @@
-const enum ACTION {
-  GET_LIST,
-  ADD_TODO,
-  DELETE_TODO,
+import { Todo } from "../domain/todo"
+import ACTION from "./actions.type"
+
+export const getAllTodos = () => {
+  return {
+    type: ACTION.GET_LIST_TODOS
+  }
 }
 
-export default ACTION
+export const addTodo = (todoItem: Todo) => {
+  return {
+    type: ACTION.ADD_TODO,
+    data: todoItem
+  }
+}

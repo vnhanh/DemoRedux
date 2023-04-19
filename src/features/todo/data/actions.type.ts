@@ -1,0 +1,8 @@
+
+enum TYPE_ACTION {
+  GET_LIST_TODOS,
+  ADD_TODO,
+  DELETE_TODO
+}
+
+export default TYPE_ACTION

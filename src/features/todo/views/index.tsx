@@ -58,15 +58,15 @@ export function ToDo(): JSX.Element {
 //   const dispatch = useAppDispatch()
 //   const data = useAppSelector(getTodos)
   const data: Todo[] = []
-//   const status = useAppSelector(getStatus)
+  //   const status = useAppSelector(getStatus)
   const [status, setStatus] = useState(Status.LOADING)
   const [selecting, setSelecting] = useState(false)
 
-//   useEffect(() => {
-//     if (status === Status.IDLE) {
-//       dispatch(fetchTodos())
-//     }
-//   }, [dispatch, status])
+  //   useEffect(() => {
+  //     if (status === Status.IDLE) {
+  //       dispatch(fetchTodos())
+  //     }
+  //   }, [dispatch, status])
 
   const onTapTodoItem = (item: Todo) => {
     // dispatch(updateTodo({
